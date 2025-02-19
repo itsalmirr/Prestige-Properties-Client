@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Dialog, DialogPanel } from '@headlessui/react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from './ui/button'
 import Image from 'next/image'
@@ -15,6 +16,12 @@ const navigation = [
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const pathSegments = pathname.split('/').filter((segment) => segment)
+
+  if (pathSegments[0] === 'auth') {
+    return null
+  }
 
   return (
     <header className='inset-x-0 top-0 z-50 bg-transparent'>
@@ -62,11 +69,11 @@ const Navbar = () => {
           ))}
         </div>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          <Button variant='outline' size='lg' className='cursor-pointer'>
-            <Link href='/auth/signin'>
+          <Link href='/auth/signin'>
+            <Button variant='outline' size='lg' className='cursor-pointer'>
               Log in <span aria-hidden='true'>&rarr;</span>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </nav>
       <Dialog
