@@ -34,7 +34,7 @@
 
 .dark {
   --background: hsl(240 10% 3.9%);
-  --foreground: hsl(0 0% 98%);
+  --foreground: hsl(30, 100%, 93%);
   --card: hsl(240 10% 3.9%);
   --card-foreground: hsl(0 0% 98%);
   --popover: hsl(240 10% 3.9%);
@@ -60,6 +60,9 @@
 }
 
 @theme inline {
+  --color-gold: #ffd700;
+  --color-burgundy: #800020;
+  --color-darkPrimary: #3b82f6;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
