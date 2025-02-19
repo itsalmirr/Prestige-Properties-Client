@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
-const Header = () => {
+const Hero = () => {
   return (
     <div>
       <div
@@ -65,4 +65,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Hero
