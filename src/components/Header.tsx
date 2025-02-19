@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 
 const Header = () => {
   return (
-    <div>
+    <div className='bg-transparent'>
       <div
         aria-hidden='true'
         className='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80'
@@ -16,7 +16,7 @@ const Header = () => {
           className='relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-burgundy to-gold opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'
         />
       </div>
-      <div className='mx-auto max-w-2xl py-32 sm:py-48'>
+      <div className='mx-auto max-w-2xl py-32 sm:py-48 bg-transparent'>
         <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
           <div className='relative rounded-full px-3 py-1 text-sm/6 text-gray-200 ring-2 ring-gold/10 hover:ring-gray-900/20'>
             Join our community of homebuyers and sellers.{' '}
@@ -26,7 +26,7 @@ const Header = () => {
             </a>
           </div>
         </div>
-        <div className='text-center'>
+        <div className='text-center bg-transparent'>
           <h1 className='text-balance text-5xl font-semibold tracking-tight text-gray-200 sm:text-7xl'>
             Discover your dream home with ease.
           </h1>
