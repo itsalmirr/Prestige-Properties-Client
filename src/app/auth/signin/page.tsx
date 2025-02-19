@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { FaGithub, FaGoogle } from 'react-icons/fa6'
+import Image from 'next/image'
 
 const SignIn = () => {
   return (
@@ -8,9 +9,11 @@ const SignIn = () => {
       {/* Logo - Top Left */}
       <div className='absolute top-0 left-0 p-4'>
         <Link href='/'>
-          <img
+          <Image
+            width={32}
+            height={32}
             alt='Your Company'
-            src='https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600'
+            src='https://tailwindui.com/plus-assets/img/logos/mark.svg?color=blue&shade=600'
             className='h-10 w-auto'
           />
         </Link>
