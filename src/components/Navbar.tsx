@@ -11,8 +11,8 @@ import Image from 'next/image'
 const navigation = [
   { name: 'Find Your Home', href: '/properties/buy' },
   { name: 'About Us', href: '/about' },
-  { name: 'Contact Us', href: '#' },
-  { name: 'Blog', href: '#' },
+  { name: 'Contact Us', href: '/contact' },
+  { name: 'Blog', href: '/blog' },
 ]
 
 const Navbar = () => {
