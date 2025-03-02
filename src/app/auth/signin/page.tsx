@@ -31,7 +31,8 @@ const SignIn = () => {
         </h2>
         <div className='mt-10 space-y-6'>
           <a
-            href='#'
+            href='http://localhost:8080/auth/github'
+            target='blank'
             className='bg-gray-800 flex w-full items-center justify-center gap-3 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-900'
           >
             <FaGithub className='size-5 text-white' />
