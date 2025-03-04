@@ -1,4 +1,5 @@
 'use client'
+import ErrorDisplay from '@/components/ErrorDisplay'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import api from '@/lib/api'
@@ -51,16 +52,18 @@ const Dashboard = () => {
     return () => controller.abort()
   }, [])
 
-  if (loading || error) {
+  if (loading) {
     return (
       <div className='flex items-center justify-center h-96'>
         <Progress value={progress} className='w-[60%]' />
       </div>
     )
   }
-  // if (error) {
-  //   return <div className='text-red-500 p-8'>{error}</div>
-  // }
+  if (error) {
+    console.error(error)
+    return <ErrorDisplay title={error} message={'Please try again later.'} />
+  }
+
   return (
     <div>
       <div>

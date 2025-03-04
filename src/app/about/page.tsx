@@ -1,52 +1,43 @@
+import OurTeam from '@/components/OurTeam'
 import Image from 'next/image'
 
 const stats = [
-  { label: 'Transactions every 24 hours', value: '44 million' },
-  { label: 'Assets under holding', value: '$119 trillion' },
-  { label: 'New users annually', value: '46,000' },
+  { label: 'Real estate transactions annually', value: '5 million' }, // Based on projections for 2025[1][6].
+  { label: 'Median home price in 2025', value: '$410,700' }, // Reflecting the median price increase for 2025[7].
+  { label: 'Homes actively for sale', value: '24.6% increase year-over-year' }, // Growth in active listings compared to 2024[5].
 ]
 
 const values = [
   {
-    name: 'Be world-class',
+    name: 'Integrity',
     description:
-      'Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.',
+      'We uphold the highest standards of honesty and transparency, ensuring every transaction is built on trust and ethical practices.',
   },
   {
-    name: 'Share everything you know',
+    name: 'Client-Centric Approach',
     description:
-      'Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.',
+      'Our clients are at the heart of everything we do. We are dedicated to understanding their unique needs and delivering personalized solutions that exceed expectations.',
   },
   {
-    name: 'Always learning',
+    name: 'Innovation',
     description:
-      'Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.',
+      'We embrace cutting-edge technology and creative strategies to simplify the real estate process and provide a seamless experience for buyers, sellers, and investors.',
   },
   {
-    name: 'Be supportive',
+    name: 'Community Commitment',
     description:
-      'Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.',
+      'We are passionate about giving back to the communities we serve, fostering positive relationships, and contributing to local growth and development.',
   },
   {
-    name: 'Take responsibility',
+    name: 'Excellence',
     description:
-      'Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.',
+      'We strive for excellence in every aspect of our business, from market expertise to customer service, ensuring a superior real estate experience for all.',
   },
   {
-    name: 'Enjoy downtime',
+    name: 'Enjoy Your Dream Home',
     description:
-      'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
+      "Relax and unwind in a space that truly feels like yours. Whether it's a cozy living room to gather with loved ones, a serene backyard for quiet evenings, or a modern kitchen to create lasting memories, your home is where life's best moments happen.",
   },
-]
-
-const team = [
-  {
-    name: 'Michael Foster',
-    role: 'Co-Founder / CTO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-  },
-  // More people...
 ]
 
 const AboutUs = () => {
@@ -100,15 +91,19 @@ const AboutUs = () => {
             <div className='mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center'>
               <div className='relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl'>
                 <h1 className='text-pretty text-5xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gold to-burgundy sm:text-7xl'>
-                  We&apos;re changing the way people connect
+                  Transforming the Way You Find Home
                 </h1>
                 <p className='mt-8 text-pretty text-lg font-medium text-gray-500 dark:text-gray-200 sm:max-w-md sm:text-xl/8 lg:max-w-none'>
-                  Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
-                  quis cupidatat mollit aute velit. Et labore commodo nulla
-                  aliqua proident mollit ullamco exercitation tempor. Sint
-                  aliqua anim nulla sunt mollit id pariatur in voluptate cillum.
-                  Eu voluptate tempor esse minim amet fugiat veniam occaecat
-                  aliqua.
+                  At Prestge Realty, we believe that finding a home should be as
+                  inspiring as living in one. Our mission is to simplify and
+                  elevate the home-buying experience by connecting people with
+                  properties that suit their dreams and lifestyles.
+                  <br />
+                  What started as a vision to make real estate more accessible
+                  has grown into a platform where innovation meets trust. We
+                  combine cutting-edge technology, expert insights, and
+                  personalized service to ensure every step of your journey
+                  feels seamless and rewarding.
                 </p>
               </div>
               <div className='mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0'>
@@ -183,18 +178,19 @@ const AboutUs = () => {
           <div className='mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row'>
             <div className='lg:w-full lg:max-w-2xl lg:flex-auto'>
               <p className='text-xl/8 text-gray-600 dark:text-gray-200'>
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas ac. Diam nulla orci at in viverra
-                scelerisque eget. Eleifend egestas fringilla sapien.
+                At Prestige Property, our mission is to empower individuals and
+                families to find their perfect home with ease and confidence. We
+                are dedicated to transforming the real estate experience by
+                combining innovative technology, expert guidance, and a deep
+                understanding of local markets.
               </p>
               <p className='mt-10 max-w-xl text-base/7 text-gray-700 dark:text-gray-200'>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit. Faucibus commodo massa rhoncus,
-                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
+                Whether you&apos;re searching for a cozy starter home, a
+                luxurious dream property, or an investment opportunity, we
+                strive to make every step of the journey seamless and
+                stress-free. Our platform is designed to connect buyers and
+                sellers in meaningful ways, ensuring that every transaction is
+                built on trust, transparency, and value.
               </p>
             </div>
             <div className='lg:flex lg:flex-auto lg:justify-center'>
@@ -236,8 +232,9 @@ const AboutUs = () => {
             Our values
           </h2>
           <p className='mt-6 text-lg/8 text-gray-600 dark:text-gray-200'>
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
+            We are committed to fostering trust, delivering excellence, and
+            creating meaningful connections. Our values drive everything we do,
+            ensuring a positive and impactful experience for everyone we serve.
           </p>
         </div>
         <dl className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
@@ -255,40 +252,7 @@ const AboutUs = () => {
       </div>
 
       {/* Team section */}
-      <div className='mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8'>
-        <div className='mx-auto max-w-2xl lg:mx-0'>
-          <h2 className='text-pretty text-4xl font-semibold tracking-tight dark:text-gold text-gray-900 sm:text-5xl'>
-            Our team
-          </h2>
-          <p className='mt-6 text-lg/8 text-gray-600 dark:text-primary'>
-            We&apos;re a dynamic group of individuals who are passionate about
-            what we do and dedicated to delivering the best results for our
-            clients.
-          </p>
-        </div>
-        <ul
-          role='list'
-          className='mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5 xl:grid-cols-6'
-        >
-          {team.map((person) => (
-            <li key={person.name}>
-              <Image
-                width={96}
-                height={96}
-                alt=''
-                src={person.imageUrl}
-                className='mx-auto size-24 rounded-full'
-              />
-              <h3 className='mt-6 text-base/7 font-semibold tracking-tight dark:text-primary text-gray-900'>
-                {person.name}
-              </h3>
-              <p className='text-sm/6 dark:text-primary text-gray-600'>
-                {person.role}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <OurTeam />
     </main>
   )
 }
