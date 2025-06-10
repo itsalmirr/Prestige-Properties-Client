@@ -2,6 +2,7 @@ import { truncateWords } from "@/lib/utils";
 import type { Listing } from "@/types/listing";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ListingCardProps {
   listing: Listing;
@@ -39,9 +40,9 @@ const ListingCard = ({ listing }: ListingCardProps) => {
           <h3 className="text-sm font-semibold [color:var(--primary)]">
             {listing.address}
           </h3>
-          <p className="text-lg font-medium tracking-tight [color:var(--foreground)]">
+          <Link href={`/buy${listing.address}`} className="text-lg font-medium tracking-tight [color:var(--foreground)] hover:underline">
             {listing.title}
-          </p>
+          </Link>
           <p className="text-sm [color:var(--muted-foreground)]">
             {truncateWords(listing.description, 10)}
           </p>
