@@ -1,10 +1,11 @@
-# Tell pnpm which directories are part of this workspace
 packages:
-  - "." # include the root package
-  # - 'packages/*'     # uncomment if you have a packages/ subfolder
+  - .
 
 ignoredBuiltDependencies:
-  - "@biomejs/biome"
+  - '@biomejs/biome'
   - esbuild
   - sharp
   - unrs-resolver
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
