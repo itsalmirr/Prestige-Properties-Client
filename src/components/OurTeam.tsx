@@ -7,6 +7,12 @@ const team = [
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
+  {
+    name: "John Doe",
+    role: "Co-Founder / CTO",
+    imageUrl:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
 ];
 
 const OurTeam = () => {
@@ -15,7 +21,7 @@ const OurTeam = () => {
       {team.map((person) => (
         <li key={person.name}>
           <Image
-            width={96}
+            width={126}
             height={96}
             alt=""
             src={person.imageUrl}

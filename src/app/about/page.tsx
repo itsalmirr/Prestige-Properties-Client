@@ -4,7 +4,7 @@ import Image from "next/image";
 const stats = [
   { label: "Real estate transactions annually", value: "5 million" }, // Based on projections for 2025[1][6].
   { label: "Median home price in 2025", value: "$410,700" }, // Reflecting the median price increase for 2025[7].
-  { label: "Homes actively for sale", value: "24.6% increase year-over-year" }, // Growth in active listings compared to 2024[5].
+  { label: "Homes actively for sale", value: "24.6% ↑ YoY" }, // Growth in active listings compared to 2024[5].
 ];
 
 const values = [
@@ -201,8 +201,8 @@ const AboutUs = () => {
                     key={stat.label}
                     className="flex flex-col-reverse gap-y-4"
                   >
-                    <dt className="text-base/7 text-accent">{stat.label}</dt>
-                    <dd className="text-5xl font-semibold tracking-tight text-foreground bg-clip-text bg-gradient-to-l from-gold to-burgundy">
+                    <dt className="text-base/7 text-foreground">{stat.label}</dt>
+                    <dd className="text-5xl font-semibold tracking-tight text-accent bg-clip-text bg-gradient-to-l from-gold to-burgundy">
                       {stat.value}
                     </dd>
                   </div>
