@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 import Image from "next/image";
+import SignInForm from "@/components/forms/SignInForm";
 
 const SignIn = () => {
   return (
@@ -29,6 +30,17 @@ const SignIn = () => {
         <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight text-gray-200">
           Sign in to PP Group
         </h2>
+        <div className="mt-10">
+          <SignInForm />
+        </div>
+        <div className="relative mt-10">
+          <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="w-full border-t border-gray-700" />
+          </div>
+          <div className="relative flex justify-center text-sm/6 font-medium">
+            <span className="bg-gray-900 px-6 text-gray-400">Or continue with</span>
+          </div>
+        </div>
         <div className="mt-10 space-y-6">
           <Link
             href="http://localhost:8080/auth/github"
@@ -47,16 +59,6 @@ const SignIn = () => {
             <FaGoogle className="size-5" />
             <span className="py-1 text-sm/6 font-semibold">Google</span>
           </Link>
-        </div>
-        <div className="relative mt-10">
-          <div className="relative flex justify-center text-sm/6 font-medium">
-            <Link
-              href="/auth/email"
-              className="px-6 text-sky-500 hover:underline"
-            >
-              Continue with Email <span aria-hidden="true">→</span>
-            </Link>
-          </div>
         </div>
       </div>
     </div>

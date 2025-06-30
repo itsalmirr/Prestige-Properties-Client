@@ -1,3 +1,7 @@
+"use client";
+
+import withAuth from "@/components/withAuth";
+
 const AccountMe = () => {
   return (
     <div>
@@ -6,4 +10,4 @@ const AccountMe = () => {
   )
 }
 
-export default AccountMe
+export default withAuth(AccountMe);

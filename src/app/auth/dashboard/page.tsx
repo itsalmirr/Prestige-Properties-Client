@@ -1,11 +1,11 @@
 'use client'
 import ErrorDisplay from '@/components/ErrorDisplay'
-import { Button } from '@/components/ui/button'
-import { Progress } from '@/components/ui/progress'
+import {Button} from '@/components/ui/button'
+import {Progress} from '@/components/ui/progress'
 import api from '@/lib/api'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import { GoSignOut, GoGear } from 'react-icons/go'
+import {useEffect, useState} from 'react'
+import {GoSignOut, GoGear} from 'react-icons/go'
 
 interface Profile {
   avatar: string
@@ -48,20 +48,20 @@ const Dashboard = () => {
       }
     }
 
-    fetchProfile()
+    void fetchProfile()
     return () => controller.abort()
   }, [])
 
   if (loading) {
     return (
       <div className='flex items-center justify-center h-96'>
-        <Progress value={progress} className='w-[60%]' />
+        <Progress value={progress} className='w-[60%]'/>
       </div>
     )
   }
   if (error) {
     console.error(error)
-    return <ErrorDisplay title={error} message={'Please try again later.'} />
+    return <ErrorDisplay title={error} message={'Please try again later.'}/>
   }
 
   return (
