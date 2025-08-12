@@ -14,7 +14,7 @@ export function middleware(request: NextRequest) {
     }
   }
 
-    if (request.nextUrl.pathname.startsWith('/auth/signin')) {
+  if (request.nextUrl.pathname.startsWith('/auth/signin')) {
     if (sessionCookie) {
       return NextResponse.redirect(new URL('/auth/dashboard', request.url))
     }

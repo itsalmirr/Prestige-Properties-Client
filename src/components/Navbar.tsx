@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Button } from './ui/button'
 import Image from 'next/image'
-import { useAuth } from '@/hooks/useAuth'
 
 const navigation = [
   { name: 'Find Your Home', href: '/properties/buy' },
@@ -16,7 +15,6 @@ const navigation = [
 ]
 
 const Navbar = () => {
-  const { isLoggedIn, isLoading } = useAuth()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const pathSegments = pathname.split('/').filter((segment) => segment)
@@ -71,20 +69,16 @@ const Navbar = () => {
           ))}
         </div>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-          {!isLoading &&
-            (isLoggedIn ? (
               <Link href='/account/me'>
                 <Button variant='outline' size='lg' className='cursor-pointer'>
                   My Account
                 </Button>
               </Link>
-            ) : (
               <Link href='/auth/signin'>
                 <Button variant='outline' size='lg' className='cursor-pointer'>
                   Log in <span aria-hidden='true'>&rarr;</span>
                 </Button>
               </Link>
-            ))}
         </div>
       </nav>
 
@@ -144,8 +138,6 @@ const Navbar = () => {
                     ))}
                   </div>
                   <div className='py-6'>
-                    {!isLoading &&
-                      (isLoggedIn ? (
                         <Link
                           href='/account/me'
                           className='-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold dark:text-gray-200 text-gray-900 hover:bg-gray-50'
@@ -159,7 +151,6 @@ const Navbar = () => {
                         >
                           Log in
                         </Link>
-                      ))}
                   </div>
                 </div>
               </div>
