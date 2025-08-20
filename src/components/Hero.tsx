@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import TextType from "./ui/TextType";
 
 const Hero = () => {
   return (
@@ -29,9 +30,17 @@ const Hero = () => {
 
         {/* main content */}
         <div className="text-center">
-          <h1 className="text-5xl font-semibold tracking-tight [color:var(--foreground)] sm:text-7xl">
+          <TextType
+            className="text-5xl font-semibold tracking-tight [color:var(--foreground)] sm:text-7xl"
+            text={["Discover your dream home with ease."]}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor={true}
+            cursorCharacter="|"
+          />
+          {/* <h1 className="text-5xl font-semibold tracking-tight [color:var(--foreground)] sm:text-7xl">
             Discover your dream home with ease.
-          </h1>
+          </h1> */}
           <p className="mt-8 text-lg font-medium [color:var(--muted-foreground)] sm:text-xl/8">
             Browse thousands of properties tailored to your needs. From cozy
             apartments to luxurious estates, we make finding your next home
