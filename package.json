@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "scan": "next dev & pnpm dlx react-scan@latest localhost:3000",
-    "lint": "next lint"
+    "dev": "bun run next dev --turbopack",
+    "build": "bun run next build",
+    "start": "bun run next start",
+    "scan": "bun run next dev & bunx react-scan@latest localhost:3000",
+    "lint": "bun run next lint"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.7",
