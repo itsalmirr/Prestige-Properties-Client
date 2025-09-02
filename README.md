@@ -276,4 +276,4 @@ For support and questions:
 
 ---
 
-Built with ❤️ by the PP Group team
+Built with passion by Almir Redzematovic
