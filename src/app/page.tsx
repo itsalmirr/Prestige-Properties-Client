@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import PropertiesForSale from "@/components/PropertiesForSale";
+// import PropertiesForSale from "@/components/PropertiesForSale";
 
 export default function Home() {
 	return (
@@ -13,7 +13,7 @@ export default function Home() {
 					<p className="mt-6 text-lg/8 text-muted-foreground">
 						Want to buy a new home? Check out our featured listings below.
 					</p>
-					<PropertiesForSale size={3} />
+					{/* <PropertiesForSale size={3} /> */}
 				</div>
 			</div>
 		</div>

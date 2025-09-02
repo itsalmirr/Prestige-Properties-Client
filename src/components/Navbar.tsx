@@ -19,7 +19,7 @@ const Navbar = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const pathname = usePathname();
 	const pathSegments = pathname.split("/").filter((segment) => segment);
-	const { user, isAuthenticated, logout } = useAuth();
+	const { isAuthenticated, logout } = useAuth();
 
 	if (pathSegments[0] === "auth") {
 		return null;
