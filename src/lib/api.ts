@@ -26,10 +26,16 @@ api.interceptors.response.use(
 		return response;
 	},
 	(error) => {
-		// Handle 401 errors globally
+		// Handle 401 errors globally, but avoid redirecting during auth checks
 		if (error.response?.status === 401) {
-			// Redirect to signin if unauthorized
-			window.location.href = "/auth/signin";
+			// Only redirect if we're not already on an auth page and it's not an auth check
+			const currentPath = window.location.pathname;
+			const isAuthPage = currentPath.startsWith("/auth");
+			const isAuthCheck = error.config?.url?.includes("/users/me");
+
+			if (!isAuthPage && !isAuthCheck) {
+				window.location.href = "/auth/signin";
+			}
 		}
 		return Promise.reject(error);
 	},

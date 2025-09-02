@@ -6,7 +6,11 @@ export interface User {
 	username: string;
 	avatar?: string;
 	provider: string;
+	provider_id: string;
 	is_active: boolean;
+	create_time: string;
+	update_time: string;
+	start_date: string;
 }
 
 export interface AuthState {

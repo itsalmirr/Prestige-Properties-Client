@@ -5,7 +5,7 @@ export async function GET(request: NextRequest) {
 	try {
 		// Forward the request to your Go backend
 		const backendUrl = process.env.BACKEND_URL || "http://localhost:8080";
-		const response = await fetch(`${backendUrl}/api/auth/me`, {
+		const response = await fetch(`${backendUrl}/api/v1/users/me`, {
 			method: "GET",
 			headers: {
 				// Forward cookies from the request
@@ -22,7 +22,8 @@ export async function GET(request: NextRequest) {
 
 		const userData = await response.json();
 
-		return NextResponse.json({ user: userData });
+		// Return the user data directly (extract from data.data)
+		return NextResponse.json({ user: userData.data });
 	} catch (error) {
 		console.error("Auth status check failed:", error);
 		return NextResponse.json(

@@ -11,8 +11,8 @@ export function middleware(request: NextRequest) {
 	);
 
 	if (isProtectedRoute) {
-		// Check for authentication cookie
-		const authCookie = request.cookies.get("session"); // Adjust cookie name as per your backend
+		// Check for authentication cookie (matching your Go backend session name)
+		const authCookie = request.cookies.get("auth-session");
 
 		if (!authCookie) {
 			// Redirect to signin if no auth cookie
