@@ -1,5 +1,5 @@
-import OurTeam from "@/components/OurTeam";
 import Image from "next/image";
+import OurTeam from "@/components/OurTeam";
 
 const stats = [
 	{ label: "Real estate transactions annually", value: "5 million" }, // Based on projections for 2025[1][6].

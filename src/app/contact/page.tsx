@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
+import { FaBuilding, FaEnvelope, FaPhone } from "react-icons/fa6";
 import { Pattern } from "@/components/Pattern";
-import { FaBuilding, FaPhone, FaEnvelope } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 const ContactUsForm = () => {
 	return (

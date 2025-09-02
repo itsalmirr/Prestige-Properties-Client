@@ -1,8 +1,8 @@
-import { truncateWords } from "@/lib/utils";
-import type { Listing } from "@/types/listing";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { truncateWords } from "@/lib/utils";
+import type { Listing } from "@/types/listing";
 
 interface ListingCardProps {
 	listing: Listing;

@@ -1,12 +1,13 @@
 "use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaBars, FaXmark } from "react-icons/fa6";
 import { Dialog } from "@headlessui/react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { Button } from "./ui/button";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { FaBars, FaXmark } from "react-icons/fa6";
+import { useAuth } from "@/contexts/AuthContext";
+import { Button } from "./ui/button";
 
 const navigation = [
 	{ name: "Find Your Home", href: "/properties/buy" },
@@ -18,6 +19,7 @@ const Navbar = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const pathname = usePathname();
 	const pathSegments = pathname.split("/").filter((segment) => segment);
+	const { user, isAuthenticated, logout } = useAuth();
 
 	if (pathSegments[0] === "auth") {
 		return null;
@@ -69,16 +71,33 @@ const Navbar = () => {
 					))}
 				</div>
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-					<Link href="/account/me">
-						<Button variant="outline" size="lg" className="cursor-pointer">
-							My Account
-						</Button>
-					</Link>
-					<Link href="/auth/signin">
-						<Button variant="outline" size="lg" className="cursor-pointer">
-							Log in <span aria-hidden="true">&rarr;</span>
-						</Button>
-					</Link>
+					{isAuthenticated ? (
+						<>
+							<Link href="/account/me">
+								<Button
+									variant="outline"
+									size="lg"
+									className="cursor-pointer mr-2"
+								>
+									My Account
+								</Button>
+							</Link>
+							<Button
+								variant="outline"
+								size="lg"
+								className="cursor-pointer"
+								onClick={logout}
+							>
+								Sign Out
+							</Button>
+						</>
+					) : (
+						<Link href="/auth/signin">
+							<Button variant="outline" size="lg" className="cursor-pointer">
+								Log in <span aria-hidden="true">&rarr;</span>
+							</Button>
+						</Link>
+					)}
 				</div>
 			</nav>
 
@@ -138,19 +157,30 @@ const Navbar = () => {
 										))}
 									</div>
 									<div className="py-6">
-										<Link
-											href="/account/me"
-											className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold dark:text-gray-200 text-gray-900 hover:bg-gray-50"
-										>
-											My Account
-										</Link>
+										{isAuthenticated ? (
+											<>
+												<Link
+													href="/account/me"
+													className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold dark:text-gray-200 text-gray-900 hover:bg-gray-50"
+												>
+													My Account
+												</Link>
+												<button
+													type="button"
+													onClick={logout}
+													className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold dark:text-gray-200 text-gray-900 hover:bg-gray-50 w-full text-left"
+												>
+													Sign Out
+												</button>
+											</>
 										) : (
-										<Link
-											href="/auth/signin"
-											className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold dark:text-gray-200 text-gray-900 hover:bg-gray-50"
-										>
-											Log in
-										</Link>
+											<Link
+												href="/auth/signin"
+												className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold dark:text-gray-200 text-gray-900 hover:bg-gray-50"
+											>
+												Log in
+											</Link>
+										)}
 									</div>
 								</div>
 							</div>

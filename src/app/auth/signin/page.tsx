@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { FaGithub, FaGoogle } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
+import { FaGithub, FaGoogle } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 const SignIn = () => {
 	return (

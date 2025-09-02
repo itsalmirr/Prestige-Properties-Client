@@ -1,6 +1,6 @@
 "use client";
-import api from "@/lib/api";
 import { useEffect, useState } from "react";
+import api from "@/lib/api";
 import type { Listing } from "@/types/listing";
 import ListingCard from "./ListingCard";
 
