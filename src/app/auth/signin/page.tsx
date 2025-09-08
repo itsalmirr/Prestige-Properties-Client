@@ -32,7 +32,6 @@ const SignIn = () => {
 				<div className="mt-10 space-y-6">
 					<Link
 						href="http://localhost:8080/auth/github"
-						target="blank"
 						className="bg-gray-800 flex w-full items-center justify-center gap-3 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-900"
 					>
 						<FaGithub className="size-5 text-white" />
@@ -41,7 +40,7 @@ const SignIn = () => {
 						</span>
 					</Link>
 					<Link
-						href="/"
+						href="http://localhost:8080/auth/google"
 						className="flex w-full items-center justify-center gap-3 rounded-md bg-white px-2 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100"
 					>
 						<FaGoogle className="size-5" />
