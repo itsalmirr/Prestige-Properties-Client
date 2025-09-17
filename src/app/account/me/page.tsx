@@ -9,6 +9,10 @@ import { GoSignOut, GoGear } from "react-icons/go";
 const backgroundImage =
 	"https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
+const AccountDetails = () => {
+	return 0;
+}
+
 const AccountPage = () => {
 	const { user, logout } = useAuth();
 	if (!user) {
@@ -65,48 +69,6 @@ const AccountPage = () => {
 				</div>
 
 				{/* Account Details */}
-				<div className="max-w-4xl mx-auto px-4 py-8">
-					<div className="grid md:grid-cols-2 gap-8">
-						{/* Profile Information */}
-						<div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-							<h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-								Profile Information
-							</h2>
-							<div className="space-y-4">
-								<div>
-									<div className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-										Full Name
-									</div>
-									<p className="mt-1 text-lg text-gray-900 dark:text-white">
-										{user.full_name}
-									</p>
-								</div>
-								<div>
-									<div className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-										Email
-									</div>
-									<p className="mt-1 text-lg text-gray-900 dark:text-white">
-										{user.email}
-									</p>
-								</div>
-								<div>
-									<div className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-										Username
-									</div>
-									<p className="mt-1 text-lg text-gray-900 dark:text-white">
-										@{user.username}
-									</p>
-								</div>
-								<div>
-									<div className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-										Provider
-									</div>
-									<p className="mt-1 text-lg text-gray-900 dark:text-white capitalize">
-										{user.provider}
-									</p>
-								</div>
-							</div>
-						</div>
 
 						{/* Account Actions */}
 						<div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
